@@ -18,9 +18,10 @@ async def go_back(call: CallbackQuery):
     callback_data = call.data
     logging.info(f"{callback_data=}")
     logging.info(f"{call.from_user.id=}")
-    await call.message.delete()
 
-    await call.message.answer("Iltimos tanlangchi!", reply_markup=categoryMenu)
+    await call.message.edit_reply_markup(reply_markup=categoryMenu)
+
+    # await call.message.answer("Iltimos tanlangchi!", reply_markup=categoryMenu)
 
 
 @dp.callback_query_handler(text="taomlar")
@@ -54,6 +55,15 @@ async def buying_cola(call: CallbackQuery, callback_data: dict):
                               reply_markup=cola_keyboard)
 
     await call.answer(cache_time=60)
+
+
+@dp.callback_query_handler(taomlar_callback.filter(item_name="palov"))
+async def buying_palov(call: CallbackQuery, callback_data: dict):
+    logging.info(f'{callback_data=}')
+
+    await call.answer("Buyurtma qabul qilindi", cache_time=60, show_alert=True)
+
+
 
 
 
