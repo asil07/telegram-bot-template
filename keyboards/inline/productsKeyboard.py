@@ -60,13 +60,13 @@ ichimlik_Menu.insert(ortga)
 cola_keyboard = InlineKeyboardMarkup(inline_keyboard=[
     [
         InlineKeyboardButton(text="Xarid qilish", url="https://mohirdev.uz/courses/telegram/"),
-        InlineKeyboardButton(text="savatga qo'shish", callback_data="ichimlik")
+        InlineKeyboardButton(text="Ortga", callback_data="ichimlik")
     ]
 ])
 
-algoritm_keyboard = InlineKeyboardMarkup(inline_keyboard=[
+palov_keyboard = InlineKeyboardMarkup(inline_keyboard=[
     [
-        InlineKeyboardButton(text="Ko'rish", url="https://mohirdev.uz/courses/algoritmlar/")
+        InlineKeyboardButton(text="Buyurtma qilish", url="https://mohirdev.uz/courses/algoritmlar/")
     ]
 ])
 
