@@ -64,7 +64,3 @@ async def buying_palov(call: CallbackQuery, callback_data: dict):
     await call.answer("Buyurtma qabul qilindi", cache_time=60, show_alert=True)
 
 
-
-
-
-
