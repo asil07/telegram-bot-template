@@ -5,7 +5,7 @@ from loader import bot
 
 
 async def photo_link(photo: types.photo_size.PhotoSize) -> str:
-    with await photo.download(BytesIO()) as file:
+    with await photo.download(destination_file=BytesIO()) as file:
         form = aiohttp.FormData()
         form.add_field(
             name='file',
