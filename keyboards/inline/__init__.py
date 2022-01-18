@@ -1,2 +1,2 @@
-from . import templates
+from . import buy_food
 from . import callback_data
