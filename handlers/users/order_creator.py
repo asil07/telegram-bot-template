@@ -79,3 +79,9 @@ async def process_pre_checkout_query(pre_checkout_query: types.PreCheckoutQuery)
     await bot.send_message(chat_id=pre_checkout_query.from_user.id,
                            text="Xaridingiz uchun rahmat!")
 
+    await bot.send_message(chat_id=ADMINS[0],
+                           text=f"Quyidagi mahsulot sotildi: {pre_checkout_query.invoice_payload}\n"
+                                f"ID: {pre_checkout_query.id}\n"
+                                f"Telegram user: {pre_checkout_query.from_user.first_name}\n"
+                                f"Xaridor: {pre_checkout_query.order_info.name}, tel: {pre_checkout_query.order_info.phone_number}")
+
